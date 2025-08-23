@@ -6,3 +6,12 @@
     border-radius: 6px;
     margin-left: 6px;
   }
+
+  .tag-poster {
+    background-color: #0099ff;
+    color: white;
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 6px;
+  }
