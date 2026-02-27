@@ -27,205 +27,213 @@
   </button>
 
   <main class="container">
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#publications">Publications</a>
-      <a href="#preprints">Pre-prints</a>
-      <a href="#education">Education</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#services">Services</a>
-    </nav>
-
-    <!-- Header Section -->
-    <header class="header" id="about">
-      <div class="profile-photo">
-        <img src="images/jianshuo.jpeg" alt="Jianshuo Dong">
-        <div class="social-links">
-          <a href="https://github.com/jianshuod" aria-label="GitHub"><i class="fa fa-github-square fa-2x"></i></a>
-          <a href="https://scholar.google.com/citations?user=CY23PzAAAAAJ&hl=en&oi=ao" aria-label="Google Scholar"><i class="ai ai-google-scholar-square ai-2x"></i></a>
+    <!-- Left Sidebar (Sticky) -->
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <div class="profile-photo">
+          <img src="images/jianshuo.jpeg" alt="Jianshuo Dong">
+          <div class="social-links">
+            <a href="https://github.com/jianshuod" aria-label="GitHub"><i class="fa fa-github-square fa-2x"></i></a>
+            <a href="https://scholar.google.com/citations?user=CY23PzAAAAAJ&hl=en&oi=ao" aria-label="Google Scholar"><i class="ai ai-google-scholar-square ai-2x"></i></a>
+          </div>
         </div>
-      </div>
-      <div class="profile-info">
-        <h1 class="name">Jianshuo Dong <span class="chinese">(董建硕)</span></h1>
-        <p class="introduction">
-          Hi! I'm a PhD student at <a href="https://www.insc.tsinghua.edu.cn/">Tsinghua University</a>, where I explore
-          <em class="highlight">machine learning security, trustworthy AI systems, and explainable AI.</em>
-          I'm advised by <a href="https://qiuhan.info/">Prof. Han Qiu</a> and collaborate closely with
-          <a href="https://personal.ntu.edu.sg/tianwei.zhang/">Prof. Tianwei Zhang</a>.
-          I'm always excited to connect with fellow researchers and practitioners—feel free to reach out!
-        </p>
+        <h1 class="name">Jianshuo Dong<br><span class="chinese">(董建硕)</span></h1>
+        <p class="affiliation">PhD Student<br>Tsinghua University</p>
         <div class="contact-info">
           <p><strong>Email:</strong> dongjs23(at)mails(dot)tsinghua(dot)edu(dot)cn</p>
           <p><strong>Office:</strong> Room 205, FIT Building, Tsinghua University, Beijing, China</p>
         </div>
+        <nav class="sidebar-nav">
+          <a href="#biography">Biography</a>
+          <a href="#news">News</a>
+          <a href="#publications">Publications</a>
+          <a href="#preprints">Pre-prints</a>
+          <a href="#education">Education</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#services">Services</a>
+        </nav>
       </div>
-    </header>
+    </aside>
 
-    <!-- News Section -->
-    <section id="news">
-      <h2 class="section-title">News</h2>
-      <div class="news-item">
-        <span class="news-date">2025-10-17</span>
-        <span class="news-text">I became a PhD candidate at Tsinghua University!</span>
-      </div>
-      <div class="news-item">
-        <span class="news-date">2025-08-23</span>
-        <span class="news-text">One paper got accepted to EMNLP 2025 main (oral)!</span>
-      </div>
-      <div class="news-item">
-        <span class="news-date">2025-08-10</span>
-        <span class="news-text">I created this website for my research!</span>
-      </div>
-    </section>
+    <!-- Right Content Area -->
+    <div class="main-content">
+      <!-- Bio Section -->
+      <section id="biography" class="section">
+        <h2 class="section-title">Biography</h2>
+        <p>Hi! I'm a PhD student at <a href="https://www.insc.tsinghua.edu.cn/">Tsinghua University</a>, where I explore
+          <span class="highlight">machine learning security, trustworthy AI systems, and explainable AI</span>.
+          I'm advised by <a href="https://qiuhan.info/">Prof. Han Qiu</a> and collaborate closely with
+          <a href="https://personal.ntu.edu.sg/tianwei.zhang/">Prof. Tianwei Zhang</a>.
+          I'm always excited to connect with fellow researchers and practitioners—feel free to reach out!
+        </p>
+      </section>
 
-    <!-- Publications Section -->
-    <section id="publications">
-      <h2 class="section-title">Publications</h2>
-      <h3 class="section-subtitle">Conference Papers</h3>
-
-      <div class="pub-entry">
-        <div class="pub-venue">[EMNLP'25]</div>
-        <div class="pub-details">
-          <div class="pub-title">"I've Decided to Leak": Probing Internals Behind Prompt Leakage Intents</div>
-          <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yutong Zhang, Yan Liu, Zhenyu Zhong, Tao Wei, Ke Xu, Minlie Huang, Chao Zhang, Han Qiu</div>
-          <div class="pub-links">
-            <a href="https://aclanthology.org/2025.emnlp-main.1082.pdf">PDF</a> /
-            <a href="https://github.com/jianshuod/Probing-leak-intents">Code</a>
-            <span class="tag-oral">Oral</span>
-          </div>
-          <div class="pub-tldr">TL;DR: Diving into the internals to understand LLMs' prompt leakage intents.</div>
+      <!-- News Section -->
+      <section id="news" class="section">
+        <h2 class="section-title">News</h2>
+        <div class="news-item">
+          <span class="news-date">2025-10-17</span>
+          <span class="news-text">I became a PhD candidate at Tsinghua University!</span>
         </div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-venue">[ICLR'25]</div>
-        <div class="pub-details">
-          <div class="pub-title">An Engorgio Prompt Makes Large Language Model Babble on</div>
-          <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Ziyuan Zhang, Qingjie Zhang, Tianwei Zhang, Hao Wang, Hewu Li, Qi Li, Chao Zhang, Ke Xu, Han Qiu</div>
-          <div class="pub-links">
-            <a href="data/5921_An_Engorgio_Prompt_Makes_.pdf">PDF</a> /
-            <a href="https://github.com/jianshuod/Engorgio-prompt">Code</a>
-          </div>
-          <div class="pub-tldr">TL;DR: An inference cost attack targeting modern auto-regressive LLMs.</div>
+        <div class="news-item">
+          <span class="news-date">2025-08-23</span>
+          <span class="news-text">One paper got accepted to EMNLP 2025 main (oral)!</span>
         </div>
-      </div>
-
-      <div class="pub-entry">
-        <div class="pub-venue">[ICCV'23]</div>
-        <div class="pub-details">
-          <div class="pub-title">One-bit Flip is All You Need: When Bit-flip Attack Meets Model Training</div>
-          <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Han Qiu, Yiming Li, Tianwei Zhang, Yuanjie Li, Zeqi Lai, Chao Zhang, Shu-Tao Xia</div>
-          <div class="pub-links">
-            <a href="data/23-iccv-2.pdf">PDF</a> /
-            <a href="https://github.com/jianshuod/TBA">Code</a>
-          </div>
-          <div class="pub-tldr">TL;DR: Insert unactivated backdoor in the model training process and make it activated by bit-flip attack.</div>
+        <div class="news-item">
+          <span class="news-date">2025-08-10</span>
+          <span class="news-text">I created this website for my research!</span>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Pre-prints Section -->
-    <section id="preprints">
-      <h2 class="section-title">Pre-prints</h2>
+      <!-- Publications Section -->
+      <section id="publications" class="section">
+        <h2 class="section-title">Publications</h2>
+        <h3 class="section-subtitle">Conference Papers</h3>
 
-      <div class="pub-entry">
-        <div class="pub-venue">[arXiv:2512.14754]</div>
-        <div class="pub-details">
-          <div class="pub-title">Revisiting the Reliability of Language Models in Instruction-Following</div>
-          <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yutong Zhang, Yan Liu, Zhenyu Zhong, Tao Wei, Chao Zhang, Han Qiu</div>
-          <div class="pub-links">
-            <a href="https://arxiv.org/abs/2512.14754">arXiv</a> /
-            <a href="https://github.com/jianshuod/IFEval-pp">Code</a>
+        <div class="pub-entry">
+          <div class="pub-venue">[EMNLP'25]</div>
+          <div class="pub-details">
+            <div class="pub-title">"I've Decided to Leak": Probing Internals Behind Prompt Leakage Intents</div>
+            <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yutong Zhang, Yan Liu, Zhenyu Zhong, Tao Wei, Ke Xu, Minlie Huang, Chao Zhang, Han Qiu</div>
+            <div class="pub-links">
+              <a href="https://aclanthology.org/2025.emnlp-main.1082.pdf">PDF</a> /
+              <a href="https://github.com/jianshuod/Probing-leak-intents">Code</a>
+              <span class="tag-oral">Oral</span>
+            </div>
+            <div class="pub-tldr">TL;DR: Diving into the internals to understand LLMs' prompt leakage intents.</div>
           </div>
-          <div class="pub-tldr">TL;DR: Investigating nuance-oriented reliability of LLMs in instruction-following with varied phrasings.</div>
         </div>
-      </div>
 
-      <div class="pub-entry">
-        <div class="pub-venue">[arXiv:2509.23694]</div>
-        <div class="pub-details">
-          <div class="pub-title">SafeSearch: Automated Red-Teaming for the Safety of LLM-Based Search Agents</div>
-          <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Sheng Guo, Hao Wang, Xun Chen, Zhuotao Liu, Tianwei Zhang, Ke Xu, Minlie Huang, Han Qiu</div>
-          <div class="pub-links">
-            <a href="https://arxiv.org/abs/2509.23694">arXiv</a> /
-            <a href="https://github.com/jianshuod/SafeSearch">Code</a>
+        <div class="pub-entry">
+          <div class="pub-venue">[ICLR'25]</div>
+          <div class="pub-details">
+            <div class="pub-title">An Engorgio Prompt Makes Large Language Model Babble on</div>
+            <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Ziyuan Zhang, Qingjie Zhang, Tianwei Zhang, Hao Wang, Hewu Li, Qi Li, Chao Zhang, Ke Xu, Han Qiu</div>
+            <div class="pub-links">
+              <a href="data/5921_An_Engorgio_Prompt_Makes_.pdf">PDF</a> /
+              <a href="https://github.com/jianshuod/Engorgio-prompt">Code</a>
+            </div>
+            <div class="pub-tldr">TL;DR: An inference cost attack targeting modern auto-regressive LLMs.</div>
           </div>
-          <div class="pub-tldr">TL;DR: To proactively discover the potential vulnerabilities of LLM-based search agents.</div>
         </div>
-      </div>
 
-      <div class="pub-entry">
-        <div class="pub-venue">[arXiv:2506.21571]</div>
-        <div class="pub-details">
-          <div class="pub-title">Towards Understanding the Cognitive Habits of Large Reasoning Models</div>
-          <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yujia Fu, Chuanrui Hu, Chao Zhang, Han Qiu</div>
-          <div class="pub-links">
-            <a href="https://arxiv.org/abs/2506.21571">arXiv</a> /
-            <a href="https://github.com/jianshuod/CogTest">Code</a>
+        <div class="pub-entry">
+          <div class="pub-venue">[ICCV'23]</div>
+          <div class="pub-details">
+            <div class="pub-title">One-bit Flip is All You Need: When Bit-flip Attack Meets Model Training</div>
+            <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Han Qiu, Yiming Li, Tianwei Zhang, Yuanjie Li, Zeqi Lai, Chao Zhang, Shu-Tao Xia</div>
+            <div class="pub-links">
+              <a href="data/23-iccv-2.pdf">PDF</a> /
+              <a href="https://github.com/jianshuod/TBA">Code</a>
+            </div>
+            <div class="pub-tldr">TL;DR: Insert unactivated backdoor in the model training process and make it activated by bit-flip attack.</div>
           </div>
-          <div class="pub-tldr">TL;DR: Does reasoning models have human-like cognitive habits?</div>
         </div>
-      </div>
+      </section>
 
-      <div class="pub-entry">
-        <div class="pub-venue">[arXiv:2507.04214]</div>
-        <div class="pub-details">
-          <div class="pub-title">Can Large Language Models Automate the Refinement of Cellular Network Specifications?</div>
-          <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Tianyi Zhang, Feng Yan, Yuanjie Li, Hewu Li, Han Qiu</div>
-          <div class="pub-links">
-            <a href="https://arxiv.org/abs/2507.04214">arXiv</a> /
-            <a href="https://github.com/jianshuod/CR-Eval">Code</a>
+      <!-- Pre-prints Section -->
+      <section id="preprints" class="section">
+        <h2 class="section-title">Pre-prints</h2>
+
+        <div class="pub-entry">
+          <div class="pub-venue">[arXiv:2512.14754]</div>
+          <div class="pub-details">
+            <div class="pub-title">Revisiting the Reliability of Language Models in Instruction-Following</div>
+            <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yutong Zhang, Yan Liu, Zhenyu Zhong, Tao Wei, Chao Zhang, Han Qiu</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2512.14754">arXiv</a> /
+              <a href="https://github.com/jianshuod/IFEval-pp">Code</a>
+            </div>
+            <div class="pub-tldr">TL;DR: Investigating nuance-oriented reliability of LLMs in instruction-following with varied phrasings.</div>
           </div>
-          <div class="pub-tldr">TL;DR: Evaluate and improve the performance of LLMs in automatically refining cellular network specifications concerning security/trustworthiness issues.</div>
         </div>
-      </div>
-    </section>
 
-    <!-- Education Section -->
-    <section id="education">
-      <h2 class="section-title">Education</h2>
-      <div class="item-row">
-        <span class="item-date">2023 - 2028 (expected)</span>
-        <span class="item-content"><strong>Tsinghua University</strong>, Beijing, China — Ph.D. Student</span>
-      </div>
-      <div class="item-row">
-        <span class="item-date">2019 - 2023</span>
-        <span class="item-content"><strong>Wuhan University</strong>, Wuhan, China — B.E.</span>
-      </div>
-    </section>
+        <div class="pub-entry">
+          <div class="pub-venue">[arXiv:2509.23694]</div>
+          <div class="pub-details">
+            <div class="pub-title">SafeSearch: Automated Red-Teaming for the Safety of LLM-Based Search Agents</div>
+            <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Sheng Guo, Hao Wang, Xun Chen, Zhuotao Liu, Tianwei Zhang, Ke Xu, Minlie Huang, Han Qiu</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2509.23694">arXiv</a> /
+              <a href="https://github.com/jianshuod/SafeSearch">Code</a> /
+              <a href="https://zhuanlan.zhihu.com/p/1962231298052584481">News</a>
+            </div>
+            <div class="pub-tldr">TL;DR: To proactively discover the potential vulnerabilities of LLM-based search agents.</div>
+          </div>
+        </div>
 
-    <!-- Teaching Section -->
-    <section id="teaching">
-      <h2 class="section-title">Teaching</h2>
-      <div class="item-row">
-        <span class="item-date">2025 Spring</span>
-        <span class="item-content"><strong>Trustworthy Machine Learning</strong>, Tsinghua University — Teaching Assistant</span>
-      </div>
-    </section>
+        <div class="pub-entry">
+          <div class="pub-venue">[arXiv:2506.21571]</div>
+          <div class="pub-details">
+            <div class="pub-title">Towards Understanding the Cognitive Habits of Large Reasoning Models</div>
+            <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yujia Fu, Chuanrui Hu, Chao Zhang, Han Qiu</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2506.21571">arXiv</a> /
+              <a href="https://github.com/jianshuod/CogTest">Code</a>
+            </div>
+            <div class="pub-tldr">TL;DR: Does reasoning models have human-like cognitive habits?</div>
+          </div>
+        </div>
 
-    <!-- Services Section -->
-    <section id="services">
-      <h2 class="section-title">Services</h2>
-      <div class="item-row">
-        <span class="item-date">[ICLR'26]</span>
-        <span class="item-content">Reviewer</span>
-      </div>
-      <div class="item-row">
-        <span class="item-date">[NeurIPS'25]</span>
-        <span class="item-content">Reviewer <span class="tag-top-reviewer">Top Reviewer</span></span>
-      </div>
-      <div class="item-row">
-        <span class="item-date">[ICLR'25]</span>
-        <span class="item-content">Reviewer <span class="tag-notable">Notable</span></span>
-      </div>
-    </section>
+        <div class="pub-entry">
+          <div class="pub-venue">[arXiv:2507.04214]</div>
+          <div class="pub-details">
+            <div class="pub-title">Can Large Language Models Automate the Refinement of Cellular Network Specifications?</div>
+            <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yuanjie Li, Jun Liu, Hewu Li, Han Qiu</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2507.04214">arXiv</a> /
+              <a href="https://github.com/jianshuod/CR-Eval">Code</a>
+            </div>
+            <div class="pub-tldr">TL;DR: Evaluate and improve the performance of LLMs in automatically refining cellular network specifications concerning security/trustworthiness issues.</div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>Last updated: 2026-01-19</p>
-    </footer>
+      <!-- Education Section -->
+      <section id="education" class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="item-row">
+          <span class="item-date">2023 - 2028 (expected)</span>
+          <span class="item-content"><strong>Tsinghua University</strong>, Beijing, China — Ph.D. Student</span>
+        </div>
+        <div class="item-row">
+          <span class="item-date">2019 - 2023</span>
+          <span class="item-content"><strong>Wuhan University</strong>, Wuhan, China — B.E.</span>
+        </div>
+      </section>
+
+      <!-- Teaching Section -->
+      <section id="teaching" class="section">
+        <h2 class="section-title">Teaching</h2>
+        <div class="item-row">
+          <span class="item-date">2025 Spring</span>
+          <span class="item-content"><strong>Trustworthy Machine Learning</strong>, Tsinghua University — Teaching Assistant</span>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="section">
+        <h2 class="section-title">Professional Services</h2>
+
+        <div class="item-row">
+          <span class="item-date">[ICLR'26]</span>
+          <span class="item-content">Reviewer</span>
+        </div>
+        <div class="item-row">
+          <span class="item-date">[NeurIPS'25]</span>
+          <span class="item-content">Reviewer <span class="tag-top-reviewer">Top Reviewer</span></span>
+        </div>
+        <div class="item-row">
+          <span class="item-date">[ICLR'25]</span>
+          <span class="item-content">Reviewer <span class="tag-notable">Notable</span></span>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>Last updated: 2026-02-27</p>
+      </footer>
+    </div>
   </main>
 
   <script>

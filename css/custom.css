@@ -2,41 +2,68 @@
    Base styles & CSS variables
    =================================== */
 :root {
-  --bg-gradient-start: #f5f7fa;
-  --bg-gradient-end: #c3cfe2;
-  --bg-color: #ffffff;
+  /* Flat background colors */
+  --body-bg: #f8f9fa;
+  --sidebar-bg: #ffffff;
+  --content-bg: #ffffff;
+
+  /* Text colors */
   --text-color: #333333;
   --text-muted: #666666;
   --text-light: #888888;
+
+  /* Border colors */
   --border-color: #f0f0f0;
   --border-color-dark: #e0e0e0;
+
+  /* Link colors */
   --link-color: #1772d0;
   --link-hover: #e37222;
-  --accent-color: #e37222;
+
+  /* Accent color */
+  --accent-color: #333333;
+
+  /* Section background */
   --section-bg: #f8f9fa;
-  --container-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Shadows */
+  --container-shadow: rgba(0, 0, 0, 0.08);
   --card-shadow: rgba(0, 0, 0, 0.05);
   --card-shadow-hover: rgba(0, 0, 0, 0.12);
+
+  /* Focus ring */
   --focus-ring: rgba(23, 114, 208, 0.5);
+
+  /* Layout */
+  --container-max-width: 1300px;
+  --sidebar-width: 260px;
+  --gap-size: 50px;
 }
 
 /* Dark mode variables */
 body.dark-mode {
-  --bg-gradient-start: #1a1a2e;
-  --bg-gradient-end: #16213e;
-  --bg-color: #1e1e2e;
+  --body-bg: #0f0f1a;
+  --sidebar-bg: #1e1e2e;
+  --content-bg: #1e1e2e;
+
   --text-color: #e0e0e0;
   --text-muted: #b0b0b0;
   --text-light: #888888;
-  --border-color: #333344;
-  --border-color-dark: #444455;
+
+  --border-color: #2a2a3a;
+  --border-color-dark: #3a3a4a;
+
   --link-color: #64b5f6;
   --link-hover: #ffab40;
-  --accent-color: #ffab40;
-  --section-bg: #2a2a3e;
-  --container-shadow: rgba(0, 0, 0, 0.4);
+
+  --accent-color: #e0e0e0;
+
+  --section-bg: #252538;
+
+  --container-shadow: rgba(0, 0, 0, 0.3);
   --card-shadow: rgba(0, 0, 0, 0.2);
   --card-shadow-hover: rgba(0, 0, 0, 0.35);
+
   --focus-ring: rgba(100, 181, 246, 0.5);
 }
 
@@ -53,57 +80,238 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-color);
-  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
-  background-attachment: fixed;
+  background: var(--body-bg);
   margin: 0;
   padding: 20px;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* ===================================
-   Main container
+   Main container - Two-column layout
    =================================== */
 .container {
-  max-width: 1000px;
+  display: flex;
+  max-width: var(--container-max-width);
   margin: 0 auto;
-  background: var(--bg-color);
-  padding: 40px 50px;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px var(--container-shadow);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  gap: var(--gap-size);
+  align-items: flex-start;
+  transition: gap 0.3s ease;
 }
 
 /* ===================================
-   Navigation bar
+   Left Sidebar (Sticky)
    =================================== */
-.nav-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 20px;
-  margin-bottom: 30px;
-  padding: 15px 0;
-  border-bottom: 1px solid var(--border-color);
+.sidebar {
+  flex: 0 0 var(--sidebar-width);
+  position: sticky;
+  top: 20px;
+  transition: flex 0.3s ease;
 }
 
-.nav-bar a {
+.sidebar-content {
+  background: var(--sidebar-bg);
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--container-shadow);
+  text-align: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar .profile-photo {
+  margin-bottom: 15px;
+}
+
+.sidebar .profile-photo img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 35%;
+  border: 4px solid var(--sidebar-bg);
+  box-shadow: 0 4px 15px var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar .profile-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px var(--card-shadow-hover);
+}
+
+.sidebar .name {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: var(--text-color);
+}
+
+.sidebar .name .chinese {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+.affiliation {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* Social links in sidebar */
+.sidebar .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.sidebar .social-links a {
+  color: var(--text-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  padding: 4px;
+}
+
+.sidebar .social-links a:hover {
+  color: var(--link-color);
+  transform: translateY(-2px);
+}
+
+.sidebar .social-links a:focus-visible {
+  border-radius: 4px;
+}
+
+/* Contact info in sidebar */
+.sidebar .contact-info {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  padding: 10px;
+  background: var(--section-bg);
+  border-radius: 8px;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+
+.sidebar .contact-info p {
+  margin: 4px 0;
+  word-break: break-word;
+}
+
+.sidebar .contact-info strong {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Sidebar navigation */
+.sidebar-nav {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.sidebar-nav a {
+  display: block;
   color: var(--text-muted);
   font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 5px 10px;
-  border-radius: 4px;
+  font-weight: 500;
+  padding: 8px 10px;
+  margin: 3px 0;
+  border-radius: 6px;
   transition: all 0.2s ease;
+  text-align: left;
 }
 
-.nav-bar a:hover {
+.sidebar-nav a:hover {
   color: var(--link-color);
   background: var(--section-bg);
+  transform: translateX(4px);
 }
 
-.nav-bar a::after {
-  display: none;
+.sidebar-nav a:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+/* ===================================
+   Right Main Content Area
+   =================================== */
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Bio section at top of main content */
+.bio-section {
+  background: var(--content-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--container-shadow);
+  margin-bottom: 30px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio-section p {
+  margin: 0;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.section .highlight {
+  color: var(--link-hover);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.section a {
+  color: var(--link-color);
+}
+
+.section a:hover {
+  color: var(--link-hover);
+}
+
+/* ===================================
+   Section cards
+   =================================== */
+.section {
+  background: var(--content-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--container-shadow);
+  margin-bottom: 25px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Section titles with emoji support */
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 0 0 20px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.section-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 20px 0 12px 0;
+}
+
+/* Subsection titles for Services */
+.subsection-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 18px 0 10px 0;
+  padding-left: 12px;
+  border-left: 3px solid var(--link-color);
+}
+
+.subsection-title:first-child {
+  margin-top: 0;
 }
 
 /* ===================================
@@ -128,14 +336,7 @@ a:focus {
   border-radius: 3px;
 }
 
-/* External link indicator */
-a[href^="http"]:not([href*="jianshuod"]):not(.no-external)::after {
-  content: "↗";
-  font-size: 0.7em;
-  margin-left: 2px;
-  opacity: 0.6;
-  vertical-align: super;
-}
+/* External link indicator removed */
 
 /* ===================================
    Dark mode toggle
@@ -148,7 +349,7 @@ a[href^="http"]:not([href*="jianshuod"]):not(.no-external)::after {
   height: 44px;
   border: none;
   border-radius: 50%;
-  background: var(--bg-color);
+  background: var(--content-bg);
   color: var(--text-color);
   cursor: pointer;
   box-shadow: 0 2px 10px var(--card-shadow);
@@ -183,121 +384,6 @@ body.dark-mode .theme-toggle .icon-sun {
 }
 
 /* ===================================
-   Header/Intro section
-   =================================== */
-.header {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 40px;
-  padding-bottom: 30px;
-  border-bottom: 2px solid var(--border-color);
-}
-
-.profile-photo {
-  flex-shrink: 0;
-  text-align: center;
-}
-
-.profile-photo img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 35%;
-  border: 4px solid var(--bg-color);
-  box-shadow: 0 4px 20px var(--card-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-photo img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 25px var(--card-shadow-hover);
-}
-
-.social-links {
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.social-links a {
-  color: var(--text-muted);
-  transition: color 0.2s ease, transform 0.2s ease;
-  display: inline-block;
-  padding: 4px;
-}
-
-.social-links a:hover {
-  color: var(--link-color);
-  transform: translateY(-3px);
-}
-
-.social-links a:focus-visible {
-  border-radius: 4px;
-}
-
-.profile-info {
-  flex: 1;
-}
-
-.name {
-  font-size: 32px;
-  font-weight: 700;
-  margin: 0 0 20px 0;
-  color: var(--text-color);
-}
-
-.name .chinese {
-  font-weight: 400;
-  color: var(--text-muted);
-  font-size: 24px;
-}
-
-.introduction {
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.highlight {
-  color: var(--accent-color);
-  font-style: italic;
-}
-
-.contact-info {
-  background: var(--section-bg);
-  padding: 15px 20px;
-  border-radius: 8px;
-  font-size: 15px;
-  border-left: 4px solid var(--accent-color);
-  transition: background 0.3s ease;
-}
-
-.contact-info p {
-  margin: 5px 0;
-}
-
-/* ===================================
-   Section headings
-   =================================== */
-.section-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--accent-color);
-  margin: 35px 0 20px 0;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--accent-color);
-}
-
-.section-subtitle {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--text-muted);
-  margin: 15px 0 10px 0;
-}
-
-/* ===================================
    Generic list items
    =================================== */
 .item-list {
@@ -319,7 +405,7 @@ body.dark-mode .theme-toggle .icon-sun {
 }
 
 .item-date {
-  flex: 0 0 150px;
+  flex: 0 0 130px;
   color: var(--text-light);
   font-size: 14px;
   font-weight: 600;
@@ -327,6 +413,11 @@ body.dark-mode .theme-toggle .icon-sun {
 
 .item-content {
   flex: 1;
+}
+
+.item-content strong {
+  color: var(--text-color);
+  font-weight: 600;
 }
 
 /* ===================================
@@ -352,10 +443,10 @@ body.dark-mode .theme-toggle .icon-sun {
 }
 
 .pub-venue {
-  flex: 0 0 150px;
+  flex: 0 0 130px;
   font-weight: 700;
   color: var(--link-color);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .pub-details {
@@ -372,12 +463,13 @@ body.dark-mode .theme-toggle .icon-sun {
 .pub-authors {
   color: var(--text-muted);
   margin-bottom: 8px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .pub-authors .me {
   border-bottom: 1px solid var(--text-color);
   padding-bottom: 1px;
+  font-weight: 500;
 }
 
 .pub-links {
@@ -385,13 +477,13 @@ body.dark-mode .theme-toggle .icon-sun {
 }
 
 .pub-links a {
-  margin-right: 8px;
+  margin-right: 4px;
   font-weight: 500;
 }
 
 .pub-tldr {
   color: var(--text-light);
-  font-size: 14px;
+  font-size: 13px;
   font-style: italic;
 }
 
@@ -494,9 +586,8 @@ body.dark-mode .theme-toggle .icon-sun {
    =================================== */
 .footer {
   text-align: center;
-  padding-top: 30px;
-  margin-top: 40px;
-  border-top: 1px solid var(--border-color);
+  padding: 20px;
+  margin-top: 30px;
   color: var(--text-light);
   font-size: 13px;
 }
@@ -552,34 +643,50 @@ body.dark-mode .theme-toggle .icon-sun {
 /* ===================================
    Responsive design
    =================================== */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
+
+/* Tablet: stack sidebar on top */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 25px;
   }
 
-  .container {
+  .sidebar {
+    flex: none;
+    position: static;
+    width: 100%;
+  }
+
+  .sidebar-content {
     padding: 25px 20px;
   }
 
-  .nav-bar {
-    gap: 6px 12px;
-    padding: 12px 0;
-    margin-bottom: 20px;
+  .sidebar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
   }
 
-  .nav-bar a {
-    font-size: 12px;
-    padding: 4px 8px;
+  .sidebar-nav a {
+    padding: 8px 16px;
+    margin: 0;
+    font-size: 14px;
   }
 
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .sidebar-nav a:hover {
+    transform: translateY(-2px);
   }
 
-  .profile-info {
-    text-align: center;
+  .main-content {
+    width: 100%;
+  }
+
+  .section,
+  .bio-section {
+    padding: 20px;
   }
 
   .pub-entry,
@@ -591,6 +698,78 @@ body.dark-mode .theme-toggle .icon-sun {
   .pub-venue,
   .item-date {
     flex: none;
+  }
+}
+
+/* Mobile: smaller profile, condensed spacing */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .sidebar .profile-photo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .sidebar .name {
+    font-size: 22px;
+  }
+
+  .sidebar .name .chinese {
+    font-size: 16px;
+  }
+
+  .affiliation {
+    font-size: 13px;
+  }
+
+  .sidebar .contact-info {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .sidebar-content {
+    padding: 20px 15px;
+  }
+
+  .sidebar-nav {
+    gap: 6px;
+  }
+
+  .sidebar-nav a {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+
+  .section,
+  .bio-section {
+    padding: 18px 15px;
+    border-radius: 10px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+  }
+
+  .subsection-title {
+    font-size: 14px;
+  }
+
+  .pub-title {
+    font-size: 15px;
+  }
+
+  .pub-authors {
+    font-size: 13px;
+  }
+
+  .pub-tldr {
+    font-size: 12px;
   }
 
   .theme-toggle {
@@ -624,14 +803,25 @@ body.dark-mode .theme-toggle .icon-sun {
   }
 
   .container {
-    box-shadow: none;
-    padding: 0;
+    flex-direction: column;
+    gap: 20px;
     max-width: 100%;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .sidebar-content,
+  .section,
+  .bio-section {
+    box-shadow: none;
+    padding: 15px;
   }
 
   .theme-toggle,
   .back-to-top,
-  .nav-bar {
+  .sidebar-nav {
     display: none;
   }
 
