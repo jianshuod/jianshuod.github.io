@@ -41,7 +41,7 @@
         <p class="affiliation">PhD Student<br>Tsinghua University</p>
         <div class="contact-info">
           <p><strong>Email:</strong> dongjs23(at)mails(dot)tsinghua(dot)edu(dot)cn</p>
-          <p><strong>Office:</strong> Room 205, FIT Building, Tsinghua University, Beijing, China</p>
+          <!-- <p><strong>Office:</strong> Room 205, FIT Building, Tsinghua University, Beijing, China</p> -->
         </div>
         <nav class="sidebar-nav">
           <a href="#biography">Biography</a>
@@ -63,7 +63,7 @@
         <p>Hi! I'm a PhD student at <a href="https://www.insc.tsinghua.edu.cn/">Tsinghua University</a>, where I explore
           <span class="highlight">machine learning security, trustworthy AI systems, and explainable AI</span>.
           I'm advised by <a href="https://qiuhan.info/">Prof. Han Qiu</a> and collaborate closely with
-          <a href="https://personal.ntu.edu.sg/tianwei.zhang/">Prof. Tianwei Zhang</a>.
+          <a href="https://personal.ntu.edu.sg/tianwei.zhang/">Prof. Tianwei Zhang</a>. <br><br>
           I'm always excited to connect with fellow researchers and practitioners—feel free to reach out!
         </p>
       </section>
@@ -91,42 +91,84 @@
         <h3 class="section-subtitle">Conference Papers</h3>
 
         <div class="pub-entry">
-          <div class="pub-venue">[EMNLP'25]</div>
+          <div class="pub-venue">[EMNLP'25]<br><span class="tag-oral">Oral</span></div>
           <div class="pub-details">
             <div class="pub-title">"I've Decided to Leak": Probing Internals Behind Prompt Leakage Intents</div>
             <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yutong Zhang, Yan Liu, Zhenyu Zhong, Tao Wei, Ke Xu, Minlie Huang, Chao Zhang, Han Qiu</div>
             <div class="pub-links">
               <a href="https://aclanthology.org/2025.emnlp-main.1082.pdf">PDF</a> /
-              <a href="https://github.com/jianshuod/Probing-leak-intents">Code</a>
-              <span class="tag-oral">Oral</span>
+              <a href="https://github.com/jianshuod/Probing-leak-intents">Code</a> /
+              <a href="#" class="bibtex-toggle" data-paper-id="emnlp2025">Bib</a>
             </div>
             <div class="pub-tldr">TL;DR: Diving into the internals to understand LLMs' prompt leakage intents.</div>
+            <div class="bibtex-content" id="bibtex-emnlp2025" hidden>
+              <pre><code>@inproceedings{dong-etal-2025-ive,
+  title = "``{I}{'}ve Decided to Leak'': Probing Internals Behind Prompt Leakage Intents",
+  author = "Dong, Jianshuo and Zhang, Yutong and Yan, Liu and Zhong, Zhenyu and Wei, Tao and Xu, Ke and Huang, Minlie and Zhang, Chao and Qiu, Han",
+  booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+  month = nov,
+  year = "2025",
+  address = "Suzhou, China",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2025.emnlp-main.1082/",
+  doi = "10.18653/v1/2025.emnlp-main.1082",
+  pages = "21318--21348"
+}</code></pre>
+              <button class="bibtex-copy" aria-label="Copy BibTeX">
+                <i class="fa fa-copy"></i> Copy
+              </button>
+            </div>
           </div>
         </div>
 
         <div class="pub-entry">
-          <div class="pub-venue">[ICLR'25]</div>
+          <div class="pub-venue">[ICLR'25]<br><span class="tag-poster">Poster</span></div>
           <div class="pub-details">
             <div class="pub-title">An Engorgio Prompt Makes Large Language Model Babble on</div>
             <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Ziyuan Zhang, Qingjie Zhang, Tianwei Zhang, Hao Wang, Hewu Li, Qi Li, Chao Zhang, Ke Xu, Han Qiu</div>
             <div class="pub-links">
               <a href="data/5921_An_Engorgio_Prompt_Makes_.pdf">PDF</a> /
-              <a href="https://github.com/jianshuod/Engorgio-prompt">Code</a>
+              <a href="https://github.com/jianshuod/Engorgio-prompt">Code</a> /
+              <a href="#" class="bibtex-toggle" data-paper-id="iclr2025">Bib</a>
             </div>
             <div class="pub-tldr">TL;DR: An inference cost attack targeting modern auto-regressive LLMs.</div>
+            <div class="bibtex-content" id="bibtex-iclr2025" hidden>
+              <pre><code>@inproceedings{dong2025engorgio,
+  title={An Engorgio Prompt Makes Large Language Model Babble on},
+  author={Jianshuo Dong and Ziyuan Zhang and Qingjie Zhang and Tianwei Zhang and Hao Wang and Hewu Li and Qi Li and Chao Zhang and Ke Xu and Han Qiu},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=m4eXBo0VNc}
+}</code></pre>
+              <button class="bibtex-copy" aria-label="Copy BibTeX">
+                <i class="fa fa-copy"></i> Copy
+              </button>
+            </div>
           </div>
         </div>
 
         <div class="pub-entry">
-          <div class="pub-venue">[ICCV'23]</div>
+          <div class="pub-venue">[ICCV'23]<br><span class="tag-poster">Poster</span></div>
           <div class="pub-details">
             <div class="pub-title">One-bit Flip is All You Need: When Bit-flip Attack Meets Model Training</div>
             <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Han Qiu, Yiming Li, Tianwei Zhang, Yuanjie Li, Zeqi Lai, Chao Zhang, Shu-Tao Xia</div>
             <div class="pub-links">
               <a href="data/23-iccv-2.pdf">PDF</a> /
-              <a href="https://github.com/jianshuod/TBA">Code</a>
+              <a href="https://github.com/jianshuod/TBA">Code</a> /
+              <a href="#" class="bibtex-toggle" data-paper-id="iccv2023">Bib</a>
             </div>
             <div class="pub-tldr">TL;DR: Insert unactivated backdoor in the model training process and make it activated by bit-flip attack.</div>
+            <div class="bibtex-content" id="bibtex-iccv2023" hidden>
+              <pre><code>@inproceedings{dong2023onebit,
+  title={One-bit Flip is All You Need: When Bit-flip Attack Meets Model Training},
+  author={Dong, Jianshuo and Han, Qiu and Li, Yiming and Zhang, Tianwei and Li, Yuanjie and Lai, Zeqi and Zhang, Chao and Xia, Shu-Tao},
+  booktitle={ICCV},
+  year={2023}
+}</code></pre>
+              <button class="bibtex-copy" aria-label="Copy BibTeX">
+                <i class="fa fa-copy"></i> Copy
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -142,9 +184,22 @@
             <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yutong Zhang, Yan Liu, Zhenyu Zhong, Tao Wei, Chao Zhang, Han Qiu</div>
             <div class="pub-links">
               <a href="https://arxiv.org/abs/2512.14754">arXiv</a> /
-              <a href="https://github.com/jianshuod/IFEval-pp">Code</a>
+              <a href="https://github.com/jianshuod/IFEval-pp">Code</a> /
+              <a href="#" class="bibtex-toggle" data-paper-id="arxiv2512">Bib</a>
             </div>
             <div class="pub-tldr">TL;DR: Investigating nuance-oriented reliability of LLMs in instruction-following with varied phrasings.</div>
+            <div class="bibtex-content" id="bibtex-arxiv2512" hidden>
+              <pre><code>@article{dong2025revisiting,
+  title={Revisiting the Reliability of Language Models in Instruction-Following},
+  author={Dong, Jianshuo and Zhang, Yutong and Liu, Yan and Zhong, Zhenyu and Wei, Tao and Zhang, Chao and Qiu, Han},
+  journal={arXiv preprint arXiv:2512.14754},
+  year={2025},
+  url={https://arxiv.org/abs/2512.14754}
+}</code></pre>
+              <button class="bibtex-copy" aria-label="Copy BibTeX">
+                <i class="fa fa-copy"></i> Copy
+              </button>
+            </div>
           </div>
         </div>
 
@@ -156,9 +211,22 @@
             <div class="pub-links">
               <a href="https://arxiv.org/abs/2509.23694">arXiv</a> /
               <a href="https://github.com/jianshuod/SafeSearch">Code</a> /
-              <a href="https://zhuanlan.zhihu.com/p/1962231298052584481">News</a>
+              <a href="https://zhuanlan.zhihu.com/p/1962231298052584481">News</a> /
+              <a href="#" class="bibtex-toggle" data-paper-id="arxiv2509">Bib</a>
             </div>
             <div class="pub-tldr">TL;DR: To proactively discover the potential vulnerabilities of LLM-based search agents.</div>
+            <div class="bibtex-content" id="bibtex-arxiv2509" hidden>
+              <pre><code>@article{dong2025safesearch,
+  title={SafeSearch: Automated Red-Teaming of LLM-Based Search Agents},
+  author={Dong, Jianshuo and Guo, Sheng and Wang, Hao and Chen, Xun and Liu, Zhuotao and Zhang, Tianwei and Xu, Ke and Huang, Minlie and Qiu, Han},
+  journal={arXiv preprint arXiv:2509.23694},
+  year={2025},
+  url={https://arxiv.org/abs/2509.23694}
+}</code></pre>
+              <button class="bibtex-copy" aria-label="Copy BibTeX">
+                <i class="fa fa-copy"></i> Copy
+              </button>
+            </div>
           </div>
         </div>
 
@@ -169,9 +237,22 @@
             <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yujia Fu, Chuanrui Hu, Chao Zhang, Han Qiu</div>
             <div class="pub-links">
               <a href="https://arxiv.org/abs/2506.21571">arXiv</a> /
-              <a href="https://github.com/jianshuod/CogTest">Code</a>
+              <a href="https://github.com/jianshuod/CogTest">Code</a> /
+              <a href="#" class="bibtex-toggle" data-paper-id="arxiv2506b">Bib</a>
             </div>
             <div class="pub-tldr">TL;DR: Does reasoning models have human-like cognitive habits?</div>
+            <div class="bibtex-content" id="bibtex-arxiv2506b" hidden>
+              <pre><code>@article{dong2025cognitive,
+  title={Towards Understanding the Cognitive Habits of Large Reasoning Models},
+  author={Dong, Jianshuo and Fu, Yujia and Hu, Chuanrui and Zhang, Chao and Qiu, Han},
+  journal={arXiv preprint arXiv:2506.21571},
+  year={2025},
+  url={https://arxiv.org/abs/2506.21571}
+}</code></pre>
+              <button class="bibtex-copy" aria-label="Copy BibTeX">
+                <i class="fa fa-copy"></i> Copy
+              </button>
+            </div>
           </div>
         </div>
 
@@ -182,9 +263,22 @@
             <div class="pub-authors"><span class="me">Jianshuo Dong</span>, Yuanjie Li, Jun Liu, Hewu Li, Han Qiu</div>
             <div class="pub-links">
               <a href="https://arxiv.org/abs/2507.04214">arXiv</a> /
-              <a href="https://github.com/jianshuod/CR-Eval">Code</a>
+              <a href="https://github.com/jianshuod/CR-Eval">Code</a> /
+              <a href="#" class="bibtex-toggle" data-paper-id="arxiv2507">Bib</a>
             </div>
-            <div class="pub-tldr">TL;DR: Evaluate and improve the performance of LLMs in automatically refining cellular network specifications concerning security/trustworthiness issues.</div>
+            <div class="pub-tldr">TL;DR: Evaluate and improve the performance of LLMs in refining cellular network specifications concerning security issues.</div>
+            <div class="bibtex-content" id="bibtex-arxiv2507" hidden>
+              <pre><code>@article{dong2025cellular,
+  title={Can Large Language Models Automate the Refinement of Cellular Network Specifications?},
+  author={Dong, Jianshuo and Li, Yuanjie and Liu, Jun and Li, Hewu and Qiu, Han},
+  journal={arXiv preprint arXiv:2507.04214},
+  year={2025},
+  url={https://arxiv.org/abs/2507.04214}
+}</code></pre>
+              <button class="bibtex-copy" aria-label="Copy BibTeX">
+                <i class="fa fa-copy"></i> Copy
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -217,6 +311,10 @@
 
         <div class="item-row">
           <span class="item-date">[ICLR'26]</span>
+          <span class="item-content">Reviewer</span>
+        </div>
+        <div class="item-row">
+          <span class="item-date">[ICML'26]</span>
           <span class="item-content">Reviewer</span>
         </div>
         <div class="item-row">
@@ -273,6 +371,62 @@
 
       backToTop.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // BibTeX toggle and copy functionality
+    (function() {
+      // Toggle BibTeX visibility (for links in pub-links)
+      document.querySelectorAll('.bibtex-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const paperId = this.getAttribute('data-paper-id');
+          const content = document.getElementById('bibtex-' + paperId);
+
+          // Toggle this one
+          content.hidden = !content.hidden;
+          this.classList.toggle('active');
+        });
+      });
+
+      // Copy BibTeX to clipboard
+      document.querySelectorAll('.bibtex-copy').forEach(button => {
+        button.addEventListener('click', async function() {
+          const code = this.previousElementSibling.querySelector('code').textContent;
+
+          try {
+            await navigator.clipboard.writeText(code);
+
+            // Visual feedback
+            const originalHTML = this.innerHTML;
+            this.innerHTML = '<i class="fa fa-check"></i> Copied!';
+            this.classList.add('copied');
+
+            setTimeout(() => {
+              this.innerHTML = originalHTML;
+              this.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = code;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            const originalHTML = this.innerHTML;
+            this.innerHTML = '<i class="fa fa-check"></i> Copied!';
+            this.classList.add('copied');
+
+            setTimeout(() => {
+              this.innerHTML = originalHTML;
+              this.classList.remove('copied');
+            }, 2000);
+          }
+        });
       });
     })();
   </script>
