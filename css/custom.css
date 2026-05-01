@@ -30,7 +30,7 @@
   --accent-soft: #eef2f5;
   --accent-purple: #7b42bc;
 
-  --tag-oral: #c9701d;
+  --tag-oral: #e67e22;
   --tag-poster: #2f6fb2;
   --tag-good: #4f6b56;
   --tag-note: #6b6a56;
@@ -294,7 +294,7 @@ p {
 }
 
 .sidebar-nav a.active::before {
-  background: var(--accent-purple);
+  background: var(--accent-color);
 }
 
 /* ===================================
@@ -399,9 +399,24 @@ p {
 }
 
 .section .highlight {
-  color: var(--accent-purple);
+  color: var(--text-color);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.bio-interests {
+  margin: 12px 0 10px 0;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+.bio-interests li + li {
+  margin-top: 4px;
+}
+
+#biography p + p,
+#biography ul + p {
+  margin-top: 10px;
 }
 
 .intro-shell {
@@ -454,7 +469,7 @@ p {
 }
 
 #biography .highlight {
-  color: var(--accent-purple);
+  color: var(--text-color);
 }
 
 .intro-aside {
@@ -536,7 +551,7 @@ a:focus {
 .news-text {
   flex: 1;
   position: relative;
-  padding-left: 18px;
+  padding-left: 24px;
 }
 
 .news-text::before {
@@ -561,12 +576,12 @@ a:focus {
 }
 
 .news-item.news-professional-milestone .news-text::before {
-  background: var(--accent-purple);
+  background: var(--tag-oral);
   box-shadow: none;
 }
 
 .news-item.news-professional-site .news-text::before {
-  background: var(--accent-purple);
+  background: var(--tag-oral);
   box-shadow: none;
 }
 
@@ -669,7 +684,7 @@ a:focus {
   font-family: var(--font-mono);
   font-size: 16px;
   font-weight: 700;
-  color: var(--accent-purple);
+  color: var(--text-color);
 }
 
 #preprints .pub-venue {
