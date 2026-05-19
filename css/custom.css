@@ -752,6 +752,7 @@ a:focus {
    =================================== */
 .tag-oral,
 .tag-poster,
+.tag-gold-reviewer,
 .tag-top-reviewer,
 .tag-notable {
   display: inline-block;
@@ -771,6 +772,10 @@ a:focus {
 
 .tag-poster {
   background: var(--tag-poster);
+}
+
+.tag-gold-reviewer {
+  background: var(--tag-oral);
 }
 
 .tag-top-reviewer {
