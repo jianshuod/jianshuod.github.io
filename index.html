@@ -9,7 +9,7 @@
   <title>Jianshuo Dong, PhD Student at Tsinghua</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/academicons.min.css">
-  <link rel="stylesheet" href="css/custom.css?v=20260902-actions">
+  <link rel="stylesheet" href="css/custom.css?v=20260903-email">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
         <p class="affiliation">PhD Candidate<br>Tsinghua University</p>
         <p class="profile-location"><i class="fa fa-map-marker" aria-hidden="true"></i> Beijing, China</p>
         <div class="profile-links">
-          <a class="profile-link" href="mailto:dongjs23@mails.tsinghua.edu.cn"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</a>
+          <button class="profile-link" id="copy-email" type="button" title="Copy dongjs23@mails.tsinghua.edu.cn"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span aria-live="polite">Email</span></button>
           <a class="profile-link" href="data/Jianshuo_Dong_CV.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> CV (PDF)</a>
           <a class="profile-link" href="https://github.com/jianshuod"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
           <a class="profile-link" aria-label="Google Scholar" href="https://scholar.google.com/citations?user=CY23PzAAAAAJ&amp;hl=en&amp;oi=ao"><i class="ai ai-google-scholar" aria-hidden="true"></i> Scholar</a>
@@ -353,6 +353,11 @@
   </main>
 
   <script>
+    document.getElementById('copy-email').addEventListener('click', async function () {
+      await navigator.clipboard.writeText('dongjs23@mails.tsinghua.edu.cn');
+      this.querySelector('span').textContent = 'Copied!';
+    });
+
     // Dark mode toggle with localStorage persistence
     (function() {
       const toggle = document.querySelector('.theme-toggle');
