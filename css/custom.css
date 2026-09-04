@@ -151,9 +151,6 @@ button.profile-link { padding: 0; border: 0; background: none; font: inherit; cu
 body.dark-mode .theme-toggle .icon-sun { display: inline; }
 .back-to-top { bottom: 18px; right: 14px; visibility: hidden; opacity: 0; transition: opacity .15s ease; }
 .back-to-top.visible { visibility: visible; opacity: 1; }
-@media (min-width: 1500px) {
-  .pub-title { white-space: nowrap; }
-}
 @media (max-width: 1000px) {
   .container { grid-template-columns: 190px minmax(0, 1fr); gap: 40px; }
   .pub-entry { grid-template-columns: 240px minmax(0, 1fr); gap: 20px; }
