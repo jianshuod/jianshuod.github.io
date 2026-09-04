@@ -115,6 +115,7 @@ button.profile-link { padding: 0; border: 0; background: none; font: inherit; cu
   background: none; color: inherit; font: inherit;
 }
 .pub-venue .tag-oral { color: var(--blue); font-weight: 700; }
+.pub-venue .tag-oral::before { content: '★'; margin-right: 4px; color: #d89b00; }
 .pub-authors { margin-bottom: 7px; font-size: 18px; font-style: normal; }
 .author-name { white-space: nowrap; }
 .pub-authors .me { font-weight: 700; }
