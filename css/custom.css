@@ -110,10 +110,11 @@ button.profile-link { padding: 0; border: 0; background: none; font: inherit; cu
 }
 .pub-entry:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
 .pub-teaser {
-  display: flex; align-items: center; justify-content: center; min-height: 118px; margin-top: 4px;
+  display: flex; align-items: center; justify-content: center; width: 210px; aspect-ratio: 210 / 132;
+  margin-top: 4px; padding: 6px;
   overflow: hidden; border: 1px solid var(--rule); border-radius: 3px; background: #fff;
 }
-.pub-teaser img { display: block; width: 100%; max-height: 146px; object-fit: contain; }
+.pub-teaser img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .pub-title { margin: 0 0 5px; font-size: 21px; line-height: 1.4; }
 .pub-title a { color: var(--strong); text-decoration: none; }
 .pub-title a:hover { color: var(--link); text-decoration: underline; }
@@ -171,7 +172,7 @@ body.dark-mode .theme-toggle .icon-sun { display: inline; }
   .news-item { grid-template-columns: 1fr; gap: 1px; margin-bottom: 12px; }
   .item-row { grid-template-columns: 1fr; gap: 2px; }
   .pub-entry { grid-template-columns: 1fr; gap: 12px; }
-  .pub-teaser { width: min(100%, 360px); min-height: 0; margin: 0 auto; }
+  .pub-teaser { width: min(100%, 360px); margin: 0 auto; }
   .pub-title { font-size: 20px; }
   .pub-authors { font-size: 18px; }
   .top-nav { gap: 0 18px; }
