@@ -46,7 +46,7 @@ p { margin: 0 0 12px; }
   display: grid;
   grid-template-columns: 210px minmax(0, 1fr);
   gap: 64px;
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 24px;
 }
