@@ -105,16 +105,14 @@ button.profile-link { padding: 0; border: 0; background: none; font: inherit; cu
 .news-professional-milestone::before, .news-professional-site::before { color: var(--purple); }
 .news-date { font-weight: 700; color: var(--strong); white-space: nowrap; }
 .pub-entry {
-  display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 24px;
-  align-items: stretch; padding: 0 0 20px; margin-bottom: 22px; border-bottom: 1px solid var(--rule);
+  display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 28px;
+  align-items: center; padding: 0 0 20px; margin-bottom: 22px; border-bottom: 1px solid var(--rule);
 }
 .pub-entry:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
 .pub-teaser {
-  display: flex; align-self: stretch; align-items: center; justify-content: center;
-  width: 300px; padding: 7px;
-  overflow: hidden; border: 1px solid var(--rule); border-radius: 3px; background: #fff;
+  display: flex; align-items: center; justify-content: center; width: 320px;
 }
-.pub-teaser img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.pub-teaser img { display: block; width: 100%; height: auto; max-height: 260px; object-fit: contain; }
 .pub-title { margin: 0 0 5px; font-size: 21px; line-height: 1.4; }
 .pub-title a { color: var(--strong); text-decoration: none; }
 .pub-title a:hover { color: var(--link); text-decoration: underline; }
