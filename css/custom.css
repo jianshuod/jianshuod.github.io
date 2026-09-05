@@ -59,7 +59,7 @@ p { margin: 0 0 12px; }
   object-position: center 30%;
   border-radius: 50%;
 }
-.name { margin: 0 0 14px; padding-bottom: 14px; border-bottom: 1px solid var(--rule); text-align: center; font-size: 28px; letter-spacing: -.4px; }
+.name { text-align: center; margin: 0 0 8px; font-size: 28px; letter-spacing: -.4px; }
 .name .chinese { display: block; margin-top: 5px; font-size: 22px; font-weight: 400; color: var(--ink); }
 .affiliation { margin-bottom: 14px; text-align: center; }
 .profile-location { display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 18px; font-size: 17px; color: var(--muted); }
@@ -129,7 +129,7 @@ button.profile-link { padding: 0; border: 0; background: none; font: inherit; cu
 }
 .pub-authors { margin-bottom: 7px; font-size: 18px; font-style: normal; }
 .author-name { white-space: nowrap; }
-.pub-authors .me { font-weight: 700; }
+.pub-authors .me { font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .pub-links { margin-bottom: 7px; font-size: 17px; color: var(--muted); }
 .pub-links a { margin: 0 3px; }
 .pub-links a:first-child { margin-left: 0; }
