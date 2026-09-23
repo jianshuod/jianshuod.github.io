@@ -89,6 +89,7 @@ button.profile-link { padding: 0; border: 0; background: none; font: inherit; cu
 .section-title { margin: 0 0 15px; padding-bottom: 9px; border-bottom: 1px solid var(--rule); font-size: 28px; }
 .section-subtitle { margin: 22px 0 10px; font-size: 22px; }
 .research-theme { margin-bottom: 6px; font-size: 20px; }
+.research-theme .highlight { color: var(--strong); }
 .bio-interests { margin: 0 0 14px; padding-left: 19px; }
 .research-subinterests { margin-top: 0; }
 .bio-interests li { margin-bottom: 7px; }
